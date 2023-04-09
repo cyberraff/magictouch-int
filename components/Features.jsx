@@ -28,13 +28,12 @@ function Features() {
 			<Heading as="h3" pt={"12"} align={"center"}>
 				welcome
 			</Heading>
-			<Stack p={"8"}>
+			<Stack px={"10"} spacing={"10"}>
 				{cards.map((card, index) => (
 					<Box
 						key={index}
 						textAlign={"center"}
 						pb={"8"}
-						m={"8"}
 						bg={"gray.300"}>
 						<Box
 							position="relative"
