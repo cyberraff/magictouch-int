@@ -54,7 +54,8 @@ export function CaptionCarousel() {
 	return (
 		<Box
 			// position={'relative'}
-			height={"600px"}
+			// height={"600px"}
+			height={{ base: "md", sm: "lg", md: "xl" }}
 			width={"full"}
 			overflow={"hidden"}>
 			{/* CSS files for react-slick */}
@@ -77,14 +78,17 @@ export function CaptionCarousel() {
 						key={index}
 						height={{ base: "md", sm: "lg", md: "xl" }}
 						position="relative"
+						overflow={"hidden"}
 						backgroundPosition="center"
 						backgroundRepeat="no-repeat"
 						backgroundSize={"cover"}
-						backgroundImage={`url(${card.image})`}>
+						backgroundImage={`linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(${card.image})`}
+						color={"gray.100"}>
 						{/* This is the block you need to change, to customize the caption */}
 						<Container
 							size="container.lg"
-							height={{ base: "450px", sm: "600px", md: "750px" }}
+							// height={{ base: "450px", sm: "600px", md: "750px" }}
+							height={{ base: "md", sm: "lg", md: "xl" }}
 							position="relative">
 							<Stack
 								spacing={6}
@@ -104,13 +108,14 @@ export function CaptionCarousel() {
 								</Heading>
 								<Text
 									fontSize={{ base: "md", lg: "lg" }}
-									color="GrayText">
+									color="Gray.100">
 									{card.text}
 								</Text>
 								<Button
 									alignSelf={"center"}
 									bg={"gray.300"}
 									w={"32"}
+									color={"black"}
 									borderRadius={"full"}
 									_hover={{ bg: "gray.200" }}>
 									Book Now
