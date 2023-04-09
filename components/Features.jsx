@@ -22,15 +22,20 @@ function Features() {
 	return (
 		<Box
 			as={"div"}
-			bg={"gray.200"}
+			bg={"white"}
 			// height={{ base: "md", sm: "lg", md: "xl" }}
 			w={""}>
 			<Heading as="h3" pt={"12"} align={"center"}>
 				welcome
 			</Heading>
-			<Stack>
+			<Stack p={"8"}>
 				{cards.map((card, index) => (
-					<Box key={index} textAlign={"center"} pb={"8"}>
+					<Box
+						key={index}
+						textAlign={"center"}
+						pb={"8"}
+						m={"8"}
+						bg={"gray.300"}>
 						<Box
 							position="relative"
 							w={{ base: "2xs" }}
