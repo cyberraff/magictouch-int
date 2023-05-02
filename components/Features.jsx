@@ -28,19 +28,23 @@ function Features() {
 			<Heading as="h3" pt={"12"} align={"center"}>
 				welcome
 			</Heading>
-			<Stack px={"10"} spacing={"10"}>
+			<Stack px={""} spacing={"10"}>
 				{cards.map((card, index) => (
 					<Box
 						key={index}
 						textAlign={"center"}
 						pb={"8"}
-						bg={"gray.300"}>
+						borderRadius={"xl"}
+						// bg={"gray.300"}
+					>
 						<Box
 							position="relative"
-							w={{ base: "2xs" }}
-							h={{ base: "3xs" }}
-							mx={"auto"}
-							my={"6"}>
+							// w={{ base: "sm" }}
+							h={{ base: "lg" }}
+							mx={"4"}
+							my={"3"}
+							overflow="hidden"
+							borderRadius={"xl"}>
 							<Image src={card.image} alt={"image"} fill />
 						</Box>
 						<Heading as={"h4"} mb={"4"}>
